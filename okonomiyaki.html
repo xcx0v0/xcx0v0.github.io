@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:"맑은 고딕";
+    background:#f6efe6;
+}
+
+ul{
+    list-style-type:none;
+}
+
+a{
+    text-decoration:none;
+}
+
+header{
+    width:100%;
+    background:#f3dfbd;
+    border-bottom:3px solid #7b2d26;
+    padding:0px 80px;
+}
+
+#logo{
+    float:left;
+}
+
+#logo img{
+    width:230px;
+    height:120px;
+    object-fit:cover;
+    display:block;
+}
+
+#menu{
+    float:right;
+    margin-top:45px;
+}
+
+#menu ul li{
+    display:inline-block;
+    position:relative;
+    margin-left:45px;
+}
+
+#menu ul li a{
+    display:block;
+    padding:8px 5px;
+    font-size:18px;
+    font-weight:bold;
+    letter-spacing:1.5px;
+    color:#7b2d26;
+    background:none;
+    border-radius:4px;
+}
+
+#menu ul li a:hover{
+    background:#7b2d26;
+    color:white;
+}
+
+#menu ul li .sub{
+    display:none;
+    position:absolute;
+    top:40px;
+    left:0;
+    width:160px;
+    background:#fffaf3;
+    border:1px solid #ddd0c0;
+}
+
+#menu ul li .sub li{
+    display:block;
+    margin-left:0;
+}
+
+#menu ul li .sub li a{
+    display:block;
+    padding:10px 12px;
+    font-size:15px;
+    color:#4a2c24;
+    background:#fffaf3;
+    text-align:left;
+}
+
+#menu ul li .sub li a:hover{
+    background:#ead7c4;
+    color:#8b3a32;
+}
+
+#menu ul li:hover .sub{
+    display:block;
+}
+#page{
+    width:92%;
+    margin:35px auto;
+}
+.clear{
+    clear:both;
+}
+#food_banner{
+    height:430px;
+    background-image:
+        linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+        url("./img/okonomi_banner.png");
+    background-size:cover;
+    background-position:center;
+    text-align:center;
+    padding-top:150px;
+    border-radius:4px;
+}
+
+#food_banner h1{
+    color:white;
+    font-size:46px;
+    letter-spacing:2px;
+}
+
+#food_banner p{
+    color:#f5e8d5;
+    font-size:20px;
+    margin-top:15px;
+}
+
+.section{
+    background:#fffaf3;
+    margin-top:35px;
+    padding:45px 55px;
+    border-radius:8px;
+}
+
+.section h2{
+    text-align:center;
+    font-size:34px;
+    color:#7b2d26;
+    margin-bottom:25px;
+}
+
+.intro_text{
+    font-size:20px;
+    line-height:2;
+    text-align:center;
+    color:#333;
+}
+
+.food_photo_box{
+    margin-top:35px;
+}
+
+.food_photo{
+    float:left;
+    width:30%;
+    margin-right:3%;
+}
+
+.food_photo:last-child{
+    margin-right:0;
+}
+
+.food_photo img{
+    width:100%;
+    height:230px;
+    object-fit:cover;
+    border-radius:8px;
+}
+
+.food_photo h3{
+    color:#7b2d26;
+    font-size:22px;
+    margin-top:15px;
+    text-align:center;
+}
+
+.info_table{
+    width:100%;
+    border-collapse:collapse;
+    font-size:18px;
+}
+
+.info_table th{
+    width:25%;
+    text-align:left;
+    color:#7b2d26;
+    padding:18px;
+    border-bottom:1px dashed #c8b8a8;
+}
+
+.info_table td{
+    padding:18px;
+    line-height:1.7;
+    border-bottom:1px dashed #c8b8a8;
+}
+
+.restaurant_box{
+    margin-top:20px;
+}
+
+.restaurant{
+    float:left;
+    width:30%;
+    margin-right:3%;
+    background:#f0ebe5;
+    padding:28px 22px;
+    border-radius:8px;
+    min-height:210px;
+}
+
+.restaurant:last-child{
+    margin-right:0;
+}
+
+.restaurant h3{
+    color:#7b2d26;
+    font-size:23px;
+    margin-bottom:15px;
+    text-align:center;
+}
+
+.restaurant p{
+    font-size:17px;
+    line-height:1.7;
+    color:#444;
+}
+.map_btn{
+    display:block;
+    width:120px;
+    margin:25px auto 0 auto;
+    padding:10px 0;
+    background:#7b2d26;
+    color:white;
+    text-align:center;
+    border-radius:5px;
+    font-size:15px;
+}
+
+.map_btn:hover{
+    background: yellowgreen;
+}
+@media screen and (max-width:768px){
+    header{
+        padding:0;
+        text-align:center;
+    }
+
+    #logo{
+        float:none;
+    }
+
+    #logo img{
+        margin:0 auto;
+    }
+
+    #menu{
+        float:none;
+        margin-top:0;
+        padding-bottom:15px;
+    }
+
+    #menu ul li{
+        display:block;
+        margin-left:0;
+        margin-top:8px;
+    }
+
+    #menu ul li .sub{
+        position:static;
+        width:100%;
+    }
+
+    #main_banner{
+        height:auto;
+        padding:70px 20px;
+    }
+
+    #main_banner h1{
+        font-size:30px;
+    }
+
+    .card{
+        float:none;
+        width:100%;
+        margin: right 0;
+        margin-bottom:20px;
+    }
+}
+footer{
+    margin-top:45px;
+    padding:25px 0;
+    background:#7b2d26;
+    color:white;
+    text-align:center;
+    font-size:14px;
+}
+</style>
+
+<title>오코노미야키</title>
+</head>
+
+<body>
+
+<header>
+    <div id="logo">
+        <a href="index.html">
+            <img src="./img/logoalpha.png" alt="로고">
+        </a>
+    </div>
+    <div id="menu">
+        <ul>
+            <li>
+                <a href="#">명소탐방</a>
+                <ul class="sub">
+                    <li><a href="peacepark.html">평화공원</a></li>
+                    <li><a href="castle.html">히로시마성</a></li>
+                    <li><a href="miyajima.html">미야지마</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">미식기행</a>
+                <ul class="sub">
+                    <li><a href="okonomiyaki.html">오코노미야키</a></li>
+                    <li><a href="kaki.html">굴 요리</a></li>
+                    <li><a href="sake.html">사케</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">이동가이드</a>
+                <ul class="sub">
+                    <li><a href="transport.html">교통수단</a></li>
+                    <li><a href="pass.html">패스</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">커뮤니티</a>
+                <ul class="sub">
+                    <li><a href="FAQS.html">FAQS</a></li>
+                    <li><a href="shopping.html">쇼핑정보</a></li>
+                    <li><a href="travel_reviews.html">여행후기</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">여행준비</a>
+               <ul class="sub">
+                   <li><a href="preparation.html">준비안내</a></li>
+                   <li><a href="ic_card.html">IC카드</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+     <div class="clear"></div>
+    
+</header>
+<div id="page">
+
+    <section id="food_banner">
+        <h1>히로시마 오코노미야키</h1>
+        <p>빼놓을 수 없다!!!</p>
+    </section>
+
+    <section class="section">
+        <h2>음식 소개</h2>
+        <p class="intro_text">
+            히로시마 의 명물 요리라고 하면, 「히로시마 오코노미야키」입니다.
+밀가루를 녹인 것에, 야채나 돼지고기를 얹거나, 섞거나 해 굽는 요리는 그 밖에도 「간사이의 오코노미야키」나 「몬자야키(도쿄)」등이 있습니다만, 히로시마 오코노미야키는 히로시마(廣島) 만의 독특한 제법으로 만듭니다.
+
+우선, 큰 철판 위에서 밀가루를 녹인 반죽을 얇고 원형으로 늘려 구워, 그 위에 양배추, 콩나물, 파 등의 야채를 충분히 태워 찜 구이로 합니다.
+그 위에 곁을 겹쳐 구워 오코노미 야키용 소스를 바르고 푸른 김을 뿌려 완성입니다.
+가게에 들어가 철판 앞에 앉아 있으면 실제로 요리하고 있는 곳을 볼 수도 있어요!
+        </p>
+    </section>
+
+    <section class="section">
+        <h2>진화형, 각지의 오코노미야키</h2>
+
+        <div class="food_photo_box">
+            <div class="food_photo">
+                <img src="./img/okonomi1.webp" alt="비고후나카야키">
+                <h3>비고후나카야키</h3>
+                <p>밖은 바삭하고, 안은 부드러운 식감이 버릇이되는 오코노미야키</p>
+            </div>
+
+            <div class="food_photo">
+                <img src="./img/okonomi2.webp" alt="구레">
+                <h3>오코노미 구레</h3>
+                <p>구레시(吳市) 에서 배를 만드는 직공이 휴식 시간에 빨리 먹을 수 있도록 구레(吳) 명물의 가는 우동을 사용하여 반죽을 접은 반원형이 특징.</p>
+            </div>
+
+            <div class="food_photo">
+                <img src="./img/okonomi3.webp" alt="오노미치야키">
+                <h3>철판 오코노미야키</h3>
+                <p>오노미치(尾道)에서 먹을 수 있는 오코노미야키로, 돼지고기 대신 해산물을 사용하여 맛이 깔끔한 것이 특징입니다.</p>
+            </div>
+
+            <div class="clear"></div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>INFORMATION</h2>
+
+        <table class="info_table">
+            <tr>
+                <th>대표 지역</th>
+                <td>히로시마 시내, 오코노미무라, 히로시마역 주변</td>
+            </tr>
+            <tr>
+                <th>주요 재료</th>
+                <td>양배추, 돼지고기, 소바면, 계란, 오코노미야키 소스</td>
+            </tr>
+            <tr>
+                <th>가격대</th>
+                <td>대체로 900엔 ~ 1,500엔 정도</td>
+            </tr>
+        </table>
+    </section>
+
+    <section class="section">
+        <h2>추천 맛집</h2>
+
+        <div class="restaurant_box">
+            <div class="restaurant">
+                <h3>오코노미무라</h3>
+                <p>여러 오코노미야키 가게가 모여 있는 히로시마의 대표 음식 거리입니다.</p>
+                <a class="map_btn" href="https://maps.app.goo.gl/Fbhvm3cXUSAKG8Q88" target="_blank">지도 보기</a>
+            </div>
+
+            <div class="restaurant">
+                <h3>밋짱</h3>
+                <p>히로시마식 오코노미야키로 잘 알려진 유명 가게 중 하나입니다.</p>
+                <a class="map_btn" href="https://maps.app.goo.gl/4jiqSj6dUcThPEgP8" target="_blank">지도 보기</a>
+            </div>
+
+            <div class="restaurant">
+                <h3>레이짱</h3>
+                <p>히로시마역 근처에서 오코노미야키를 맛볼 수 있는 인기 가게입니다.</p>
+                <a class="map_btn" href="https://maps.app.goo.gl/Hzr9w59PShLSrRCQ8" target="_blank">지도 보기</a>
+            </div>
+
+            <div class="clear"></div>
+        </div>
+    </section>
+
+</div>
+<footer>
+    Copyright &copy; 히로시마 여행 정보 사이트. All rights reserved.
+</footer>
+
+</body>
+</html>

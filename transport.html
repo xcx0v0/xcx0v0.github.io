@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:"맑은 고딕";
+    background:#f6efe6;
+}
+
+ul{
+    list-style-type:none;
+}
+
+a{
+    text-decoration:none;
+}
+
+header{
+    width:100%;
+    background:#f3dfbd;
+    border-bottom:3px solid #7b2d26;
+    padding:0px 80px;
+}
+
+#logo{
+    float:left;
+}
+
+#logo img{
+    width:230px;
+    height:120px;
+    object-fit:cover;
+    display:block;
+}
+
+#menu{
+    float:right;
+    margin-top:45px;
+}
+
+#menu ul li{
+    display:inline-block;
+    position:relative;
+    margin-left:45px;
+}
+
+#menu ul li a{
+    display:block;
+    padding:8px 5px;
+    font-size:18px;
+    font-weight:bold;
+    letter-spacing:1.5px;
+    color:#7b2d26;
+    background:none;
+    border-radius:4px;
+}
+
+#menu ul li a:hover{
+    background:#7b2d26;
+    color:white;
+}
+
+#menu ul li .sub{
+    display:none;
+    position:absolute;
+    top:40px;
+    left:0;
+    width:160px;
+    background:#fffaf3;
+    border:1px solid #ddd0c0;
+    z-index:100;
+}
+
+#menu ul li .sub li{
+    display:block;
+    margin-left:0;
+}
+
+#menu ul li .sub li a{
+    display:block;
+    padding:10px 12px;
+    font-size:15px;
+    color:#4a2c24;
+    background:#fffaf3;
+    text-align:left;
+}
+
+#menu ul li .sub li a:hover{
+    background:#ead7c4;
+    color:#8b3a32;
+}
+
+#menu ul li:hover .sub{
+    display:block;
+}
+
+#page{
+    width:92%;
+    margin:35px auto;
+}
+
+.clear{
+    clear:both;
+}
+
+#transport_banner{
+    height:420px;
+    background-image:
+        linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+        url("./img/transport_banner.png");
+    background-size:cover;
+    background-position:center;
+    text-align:center;
+    padding-top:145px;
+    border-radius:4px;
+}
+
+#transport_banner h1{
+    color:white;
+    font-size:46px;
+    margin-bottom:15px;
+}
+
+#transport_banner p{
+    color:#f5e8d5;
+    font-size:20px;
+}
+
+.section{
+    background:#fffaf3;
+    margin-top:35px;
+    padding:45px 55px;
+    border-radius:8px;
+}
+
+.section h2{
+    text-align:center;
+    font-size:34px;
+    color:#7b2d26;
+    margin-bottom:35px;
+}
+
+.transport_item{
+    background:#f0ebe5;
+    margin-bottom:30px;
+    padding:30px;
+    border-radius:8px;
+}
+
+.transport_item img{
+    float:left;
+    width:35%;
+    height:auto;
+    border-radius:8px;
+}
+
+.transport_text{
+    float:right;
+    width:60%;
+    padding:20px 10px;
+}
+
+.transport_text h3{
+    color:#7b2d26;
+    font-size:28px;
+    margin-bottom:20px;
+}
+
+.transport_text p{
+    font-size:18px;
+    line-height:1.8;
+    color:#444;
+}
+.map_btn{
+    display:block;
+    width:120px;
+    margin:25px auto 0 auto;
+    padding:10px 0;
+    background:#7b2d26;
+    color:white;
+    text-align:center;
+    border-radius:5px;
+    font-size:15px;
+}
+
+.map_btn:hover{
+    background: yellowgreen;
+}
+@media screen and (max-width:768px){
+    header{
+        padding:0;
+        text-align:center;
+    }
+
+    #logo{
+        float:none;
+    }
+
+    #logo img{
+        margin:0 auto;
+    }
+
+    #menu{
+        float:none;
+        margin-top:0;
+        padding-bottom:15px;
+    }
+
+    #menu ul li{
+        display:block;
+        margin-left:0;
+        margin-top:8px;
+    }
+
+    #menu ul li .sub{
+        position:static;
+        width:100%;
+    }
+
+    #transport_banner{
+        height:auto;
+        padding:80px 20px;
+    }
+
+    #transport_banner h1{
+        font-size:34px;
+    }
+
+    .transport_item img{
+        float:none;
+        width:100%;
+        height:220px;
+    }
+
+    .transport_text{
+        float:none;
+        width:100%;
+        padding:25px 0 0 0;
+    }
+}
+
+footer{
+    margin-top:45px;
+    padding:25px 0;
+    background:#7b2d26;
+    color:white;
+    text-align:center;
+    font-size:14px;
+}
+</style>
+
+<title>교통수단</title>
+</head>
+
+<body>
+
+<header>
+    <div id="logo">
+        <a href="index.html">
+            <img src="./img/logoalpha.png" alt="로고">
+        </a>
+    </div>
+    <div id="menu">
+        <ul>
+            <li>
+                <a href="#">명소탐방</a>
+                <ul class="sub">
+                    <li><a href="peacepark.html">평화공원</a></li>
+                    <li><a href="castle.html">히로시마성</a></li>
+                    <li><a href="miyajima.html">미야지마</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">미식기행</a>
+                <ul class="sub">
+                    <li><a href="okonomiyaki.html">오코노미야키</a></li>
+                    <li><a href="kaki.html">굴 요리</a></li>
+                    <li><a href="sake.html">사케</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">이동가이드</a>
+                <ul class="sub">
+                    <li><a href="transport.html">교통수단</a></li>
+                    <li><a href="pass.html">패스</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">커뮤니티</a>
+                <ul class="sub">
+                    <li><a href="FAQS.html">FAQS</a></li>
+                    <li><a href="shopping.html">쇼핑정보</a></li>
+                    <li><a href="travel_reviews.html">여행후기</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">여행준비</a>
+                <ul class="sub">
+                   <li><a href="preparation.html">준비안내</a></li>
+                   <li><a href="ic_card.html">IC카드</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="clear"></div>
+</header>
+
+<div id="page">
+
+    <section id="transport_banner">
+        <h1>교통수단</h1>
+        <p>히로시마 여행에서 이용하는 이동 방법을 소개합니다.</p>
+    </section>
+
+    <section class="section">
+        <h2>히로시마 주요 교통수단</h2>
+
+        <div class="transport_item">
+            <img src="./img/tram.png" alt="히로시마 전차">
+            <div class="transport_text">
+                <h3>히로시마 전차</h3>
+                <p>
+                    히로시마 시내 관광에 가장 편리한 교통수단입니다.
+                    히로시마역, 원폭돔, 평화기념공원, 핫초보리 등 주요 관광지를 연결합니다.
+                    노선이 시내 중심을 지나기 때문에 처음 방문하는 여행객도 쉽게 이용할 수 있습니다.
+                </p>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        <div class="transport_item">
+            <img src="./img/jr.png" alt="JR 열차">
+            <div class="transport_text">
+                <h3>JR 열차</h3>
+                <p>
+                    히로시마역에서 미야지마구치, 오노미치, 이와쿠니 등 주변 지역으로 이동할 때 유용합니다.
+                    미야지마에 갈 경우 JR 산요본선을 이용해 미야지마구치역까지 이동한 뒤
+                    페리로 갈아타면 됩니다.
+                </p>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        <div class="transport_item">
+            <img src="./img/ferry.png" alt="미야지마 페리">
+            <div class="transport_text">
+                <h3>미야지마 페리</h3>
+                <p>
+                    미야지마구치 부두에서 미야지마섬으로 이동하는 배입니다.
+                    탑승 시간은 약 15분 정도이며, 날씨가 좋을 때는 바다 위 도리이를 가까이 볼 수 있습니다.
+                    미야지마 관광에 꼭 필요한 교통수단입니다.
+                </p>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>추천 이동 루트</h2>
+
+        <div class="transport_item">
+            <img src="./img/recommend_route.png" alt="추천 이동 루트">
+            <div class="transport_text">
+                <h3>지역에 따른 여행 루트 모음</h3>
+                <p>
+                    히로시마는 시내 관광과 주변 지역 탐방이 모두 편리한 도시입니다.
+                    시내에서는 전차를 이용해 원폭돔, 평화공원, 히로시마성 등을 둘러보고,
+                    JR 열차로 미야지마구치까지 이동한 뒤 페리로 미야지마섬을 방문하는 것을 추천드립니다.
+                    또한, 오노미치나 이와쿠니 등 주변 지역도 JR 열차로 쉽게 접근할 수 있으니, 일정에 여유가 있다면 꼭 방문해보세요!
+                </p>
+                 <a class="map_btn" href="https://dive-hiroshima.com/en/course/?area=22&offset=1&order=date&search=true" target="_blank">지도 보기</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </section>
+
+</div>
+
+<footer>
+    Copyright &copy; 히로시마 여행 정보 사이트. All rights reserved.
+</footer>
+
+</body>
+</html>

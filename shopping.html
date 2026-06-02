@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:"맑은 고딕";
+    background:#f6efe6;
+}
+
+ul{
+    list-style-type:none;
+}
+
+a{
+    text-decoration:none;
+}
+
+header{
+    width:100%;
+    background:#f3dfbd;
+    border-bottom:3px solid #7b2d26;
+    padding:0px 80px;
+}
+
+#logo{
+    float:left;
+}
+
+#logo img{
+    width:230px;
+    height:120px;
+    object-fit:cover;
+    display:block;
+}
+
+#menu{
+    float:right;
+    margin-top:45px;
+}
+
+#menu ul li{
+    display:inline-block;
+    position:relative;
+    margin-left:45px;
+}
+
+#menu ul li a{
+    display:block;
+    padding:8px 5px;
+    font-size:18px;
+    font-weight:bold;
+    letter-spacing:1.5px;
+    color:#7b2d26;
+    background:none;
+    border-radius:4px;
+}
+
+#menu ul li a:hover{
+    background:#7b2d26;
+    color:white;
+}
+
+#menu ul li .sub{
+    display:none;
+    position:absolute;
+    top:40px;
+    left:0;
+    width:160px;
+    background:#fffaf3;
+    border:1px solid #ddd0c0;
+}
+
+#menu ul li .sub li{
+    display:block;
+    margin-left:0;
+}
+
+#menu ul li .sub li a{
+    display:block;
+    padding:10px 12px;
+    font-size:15px;
+    color:#4a2c24;
+    background:#fffaf3;
+    text-align:left;
+}
+
+#menu ul li .sub li a:hover{
+    background:#ead7c4;
+    color:#8b3a32;
+}
+
+#menu ul li:hover .sub{
+    display:block;
+}
+#page{
+    width:92%;
+    margin:35px auto;
+}
+.clear{
+    clear:both;
+}
+#shopping_banner{
+    height:360px;
+    background-image:
+        linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+        url("./img/shopping_banner.jpg");
+    background-size:cover;
+    background-position:center;
+    text-align:center;
+    padding-top:120px;
+    border-radius:6px;
+}
+
+#shopping_banner h1{
+    color:white;
+    font-size:46px;
+    margin-bottom:15px;
+}
+
+#shopping_banner p{
+    color:#f5e8d5;
+    font-size:20px;
+}
+
+.section{
+    background:#fffaf3;
+    margin-top:35px;
+    padding:45px 55px;
+    border-radius:8px;
+}
+
+.section h2{
+    text-align:center;
+    font-size:34px;
+    color:#7b2d26;
+    margin-bottom:35px;
+}
+
+.shopping_card{
+    float:left;
+    width:31%;
+    margin-right:3.5%;
+    min-height:600px;
+    background:#f0ebe5;
+    border-radius:8px;
+    overflow:hidden;
+}
+
+.shopping_card:nth-child(4){
+    margin-right:0;
+}
+
+.shopping_card img{
+    width:100%;
+    height:230px;
+    object-fit:cover;
+    display:block;
+}
+
+.shopping_card h3{
+    color:#7b2d26;
+    font-size:24px;
+    margin:18px 20px 10px 20px;
+}
+
+.shopping_card p{
+    font-size:17px;
+    line-height:1.7;
+    color:#444;
+    margin:0 20px 25px 20px;
+}
+
+.shop_place{
+    background:#f0ebe5;
+    margin-bottom:30px;
+    padding:30px;
+    border-radius:8px;
+}
+
+.shop_place img{
+    float:left;
+    width:38%;
+    height:250px;
+    object-fit:cover;
+    border-radius:8px;
+}
+
+.shop_text{
+    float:right;
+    width:58%;
+    padding:15px 10px;
+}
+
+.shop_text h3{
+    color:#7b2d26;
+    font-size:28px;
+    margin-bottom:18px;
+}
+
+.shop_text ul{
+    padding-left:25px;
+}
+
+.shop_text li{
+    list-style-type:disc;
+    font-size:18px;
+    line-height:2;
+    color:#444;
+}
+@media screen and (max-width:768px){
+    header{
+        padding:0;
+        text-align:center;
+    }
+
+    #logo{
+        float:none;
+    }
+
+    #logo img{
+        margin:0 auto;
+    }
+
+    #menu{
+        float:none;
+        margin-top:0;
+        padding-bottom:15px;
+    }
+
+    #menu ul li{
+        display:block;
+        margin-left:0;
+        margin-top:8px;
+    }
+
+    #menu ul li .sub{
+        position:static;
+        width:100%;
+    }
+
+    #main_banner{
+        height:auto;
+        padding:70px 20px;
+    }
+
+    #main_banner h1{
+        font-size:30px;
+    }
+
+    .card{
+        float:none;
+        width:100%;
+        margin: right 0;
+        margin-bottom:20px;
+    }
+    #shopping_banner{
+    height:auto;
+    padding:80px 20px;
+    }
+
+    #shopping_banner h1{
+        font-size:34px;
+    }
+
+    .section{
+        padding:35px 25px;
+    }
+
+    .shopping_card{
+        float:none;
+        width:100%;
+        margin-right:0;
+        margin-bottom:25px;
+    }
+
+    .shop_place img{
+        float:none;
+        width:100%;
+        height:230px;
+    }
+
+    .shop_text{
+        float:none;
+        width:100%;
+        padding:25px 0 0 0;
+    }
+}
+footer{
+    margin-top:45px;
+    padding:25px 0;
+    background:#7b2d26;
+    color:white;
+    text-align:center;
+    font-size:14px;
+}
+
+</style>
+
+<title>히로시마 여행 정보 사이트</title>
+</head>
+
+<body>
+
+<header>
+    <div id="logo">
+        <a href="index.html">
+            <img src="./img/logoalpha.png" alt="로고">
+        </a>
+    </div>
+    <div id="menu">
+        <ul>
+            <li>
+                <a href="#">명소탐방</a>
+                <ul class="sub">
+                    <li><a href="peacepark.html">평화공원</a></li>
+                    <li><a href="castle.html">히로시마성</a></li>
+                    <li><a href="miyajima.html">미야지마</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">미식기행</a>
+                <ul class="sub">
+                    <li><a href="okonomiyaki.html">오코노미야키</a></li>
+                    <li><a href="kaki.html">굴 요리</a></li>
+                    <li><a href="sake.html">사케</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">이동가이드</a>
+                <ul class="sub">
+                    <li><a href="transport.html">교통수단</a></li>
+                    <li><a href="pass.html">패스</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">커뮤니티</a>
+                <ul class="sub">
+                    <li><a href="FAQS.html">FAQS</a></li>
+                    <li><a href="shopping.html">쇼핑정보</a></li>
+                    <li><a href="travel_reviews.html">여행후기</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">여행준비</a>
+                <ul class="sub">
+                   <li><a href="preparation.html">준비안내</a></li>
+                   <li><a href="ic_card.html">IC카드</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="clear"></div>
+</header>
+<div id="page">
+
+    <section id="shopping_banner">
+        <h1>쇼핑정보</h1>
+        <p>히로시마의 대표 상품과 쇼핑 장소를 소개합니다.</p>
+    </section>
+
+    <section class="section">
+        <h2>히로시마 대표 상품</h2>
+
+        <div class="shopping_card">
+            <img src="./img/momiji.webp" alt="모미지만쥬">
+            <h3>모미지만쥬</h3>
+            <p>단풍잎 모양의 히로시마 대표 과자입니다. 팥, 크림, 초콜릿 등 다양한 맛이 있어 선물용으로 좋습니다.
+                히로시마의 기념품이라고하면 역시 모미지 만주!
+                최근에는 아이디어로 가득 찬 새로운 맛과 특이한 질감의 새로운 얼굴도 속속 등장하고 있습니다.
+            </p>
+        </div>
+
+        <div class="shopping_card">
+            <img src="./img/lemon.webp" alt="오노미치 레몬 상품">
+            <h3>오노미치 레몬 상품</h3>
+            <p>히로시마현의 오노미치(尾道) 시는 일본 내에서 국산 레몬 생산량 1위를 자랑하는 레몬의 성지입니다. 
+                레몬 쿠키, 레몬 케이크, 레몬 음료 등 다양한 상품이 있으며 산뜻한 맛으로 인기가 많습니다.</p>
+        </div>
+
+        <div class="shopping_card">
+            <img src="./img/brush.jpg" alt="쿠마노 붓">
+            <h3>쿠마노 붓</h3>
+            <p>약 180년의 역사와 전통을 지금에 계승하는 장인의 손에 의해 하나하나 손수 만든 전통 공예품의 일품입니다. 
+                일본 제일의 붓으로 불리는 쿠마노 붓의 뛰어난 기술은, 전국의 모필 생산량의 80%를 체결하고 있는 것으로 증명되고 있습니다. 
+                최근에는 그 뛰어난 기술을 화필과 화장필에 활용하여 함께 전국 제일의 생산량을 자랑하고 있습니다.</p>
+        </div>
+
+        <div class="clear"></div>
+    </section>
+
+    <section class="section">
+        <h2>추천 쇼핑 장소</h2>
+
+        <div class="shop_place">
+            <img src="./img/ekie.jpg" alt="히로시마역 에키에">
+            <div class="shop_text">
+                <h3>히로시마역 ekie</h3>
+                <ul>
+                    <li>히로시마역 안에 있어 접근성이 좋습니다.</li>
+                    <li>기념품을 한곳에서 구매할 수 있습니다.</li>
+                    <li>공항버스 탑승장 근처라 귀국전 편하게 이용할 수 있습니다.</li>
+                </ul>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        <div class="shop_place">
+            <img src="./img/miyajima_shop.jpg" alt="미야지마 오모테산도 상점가">
+            <div class="shop_text">
+                <h3>미야지마 오모테산도 상점가</h3>
+                <ul>
+                    <li>미야지마 관광 중 함께 둘러보기 좋은 쇼핑 거리입니다.</li>
+                    <li>히츠마부시, 굴 관련 상품, 토리이키링 등 지역 기념품을 판매합니다.</li>
+                    <li>전통적인 일본 거리 분위기를 느낄 수 있습니다.</li>
+                </ul>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+    </section>
+
+</div>
+<footer>
+    Copyright &copy; 히로시마 여행 정보 사이트. All rights reserved.
+</footer>
+
+</body>
+</html>

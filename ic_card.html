@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:"맑은 고딕";
+    background:#f6efe6;
+}
+
+ul{
+    list-style-type:none;
+}
+
+a{
+    text-decoration:none;
+}
+
+header{
+    width:100%;
+    background:#f3dfbd;
+    border-bottom:3px solid #7b2d26;
+    padding:0px 80px;
+}
+
+#logo{
+    float:left;
+}
+
+#logo img{
+    width:230px;
+    height:120px;
+    object-fit:cover;
+    display:block;
+}
+
+#menu{
+    float:right;
+    margin-top:45px;
+}
+
+#menu ul li{
+    display:inline-block;
+    position:relative;
+    margin-left:45px;
+}
+
+#menu ul li a{
+    display:block;
+    padding:8px 5px;
+    font-size:18px;
+    font-weight:bold;
+    letter-spacing:1.5px;
+    color:#7b2d26;
+    background:none;
+    border-radius:4px;
+}
+
+#menu ul li a:hover{
+    background:#7b2d26;
+    color:white;
+}
+
+#menu ul li .sub{
+    display:none;
+    position:absolute;
+    top:40px;
+    left:0;
+    width:160px;
+    background:#fffaf3;
+    border:1px solid #ddd0c0;
+}
+
+#menu ul li .sub li{
+    display:block;
+    margin-left:0;
+}
+
+#menu ul li .sub li a{
+    display:block;
+    padding:10px 12px;
+    font-size:15px;
+    color:#4a2c24;
+    background:#fffaf3;
+    text-align:left;
+}
+
+#menu ul li .sub li a:hover{
+    background:#ead7c4;
+    color:#8b3a32;
+}
+
+#menu ul li:hover .sub{
+    display:block;
+}
+#page{
+    width:92%;
+    margin:35px auto;
+}
+.clear{
+    clear:both;
+}
+#icoca_banner{
+    height:360px;
+    background-image:
+    linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+    url("./img/icoca_banner.jpg");
+
+    background-size:cover;
+    background-position:center;
+    text-align:center;
+    padding-top:120px;
+    border-radius:6px;
+}
+
+#icoca_banner h1{
+    color:white;
+    font-size:46px;
+    margin-bottom:15px;
+}
+
+#icoca_banner p{
+    color:#f5e8d5;
+    font-size:20px;
+}
+
+.section{
+    background:#fffaf3;
+    margin-top:35px;
+    padding:45px 55px;
+    border-radius:8px;
+}
+
+.section h2{
+    text-align:center;
+    font-size:34px;
+    color:#7b2d26;
+    margin-bottom:35px;
+}
+
+.icoca_intro{
+    background:#f0ebe5;
+    padding:30px;
+    border-radius:8px;
+}
+
+.icoca_intro img{
+    float:left;
+    width:35%;
+    height:250px;
+    object-fit:contain;
+    background:white;
+    border-radius:8px;
+}
+
+.icoca_text{
+    float:right;
+    width:60%;
+    padding-top:20px;
+}
+
+.icoca_text h3{
+    color:#7b2d26;
+    font-size:30px;
+    margin-bottom:20px;
+}
+
+.icoca_text p{
+    font-size:18px;
+    line-height:1.8;
+    color:#444;
+}
+
+.advantage{
+    float:left;
+    width:30%;
+    margin-right:3%;
+    min-height:250px;
+    background:#f0ebe5;
+    padding:25px;
+    border-radius:8px;
+    text-align:center;
+}
+
+.advantage:last-child{
+    margin-right:0;
+}
+
+.advantage h3{
+    color:#7b2d26;
+    margin-bottom:15px;
+    font-size:24px;
+}
+
+.advantage p{
+    color:#444;
+    line-height:1.7;
+}
+
+.guide_list{
+    background:#f0ebe5;
+    padding:30px 45px;
+    border-radius:8px;
+}
+
+.guide_list li{
+    list-style-type:disc;
+    font-size:18px;
+    line-height:2;
+    color:#444;
+}
+@media screen and (max-width:768px){
+    header{
+        padding:0;
+        text-align:center;
+    }
+
+    #logo{
+        float:none;
+    }
+
+    #logo img{
+        margin:0 auto;
+    }
+
+    #menu{
+        float:none;
+        margin-top:0;
+        padding-bottom:15px;
+    }
+
+    #menu ul li{
+        display:block;
+        margin-left:0;
+        margin-top:8px;
+    }
+
+    #menu ul li .sub{
+        position:static;
+        width:100%;
+    }
+
+    #main_banner{
+        height:auto;
+        padding:70px 20px;
+    }
+
+    #main_banner h1{
+        font-size:30px;
+    }
+
+    .card{
+        float:none;
+        width:100%;
+        margin: right 0;
+        margin-bottom:20px;
+    }
+    #icoca_banner{
+    height:auto;
+    padding:80px 20px;
+    }
+
+    #icoca_banner h1{
+        font-size:34px;
+    }
+
+    .icoca_intro img{
+        float:none;
+        width:100%;
+        height:220px;
+    }
+
+    .icoca_text{
+        float:none;
+        width:100%;
+        padding-top:25px;
+    }
+
+    .advantage{
+        float:none;
+        width:100%;
+        margin-right:0;
+        margin-bottom:20px;
+    }
+}
+footer{
+    margin-top:45px;
+    padding:25px 0;
+    background:#7b2d26;
+    color:white;
+    text-align:center;
+    font-size:14px;
+}
+</style>
+
+<title>히로시마 여행 정보 사이트</title>
+</head>
+
+<body>
+
+<header>
+    <div id="logo">
+        <a href="index.html">
+            <img src="./img/logoalpha.png" alt="로고">
+        </a>
+    </div>
+    <div id="menu">
+        <ul>
+            <li>
+                <a href="#">명소탐방</a>
+                <ul class="sub">
+                    <li><a href="peacepark.html">평화공원</a></li>
+                    <li><a href="castle.html">히로시마성</a></li>
+                    <li><a href="miyajima.html">미야지마</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">미식기행</a>
+                <ul class="sub">
+                    <li><a href="okonomiyaki.html">오코노미야키</a></li>
+                    <li><a href="kaki.html">굴 요리</a></li>
+                    <li><a href="sake.html">사케</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">이동가이드</a>
+                <ul class="sub">
+                    <li><a href="transport.html">교통수단</a></li>
+                    <li><a href="pass.html">패스</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">커뮤니티</a>
+                <ul class="sub">
+                    <li><a href="FAQS.html">FAQS</a></li>
+                    <li><a href="shopping.html">쇼핑정보</a></li>
+                    <li><a href="travel_reviews.html">여행후기</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">여행준비</a>
+                <ul class="sub">
+                    <li><a href="preparation.html">준비안내</a></li>
+                    <li><a href="ic_card.html">IC카드</a></li>
+                 </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="clear"></div>
+</header>
+<div id="page">
+
+    <section id="icoca_banner">
+        <h1>ICOCA 카드 안내</h1>
+        <p>히로시마 여행을 더욱 편리하게 만들어주는 교통카드입니다.</p>
+    </section>
+
+    <section class="section">
+        <h2>ICOCA란?</h2>
+
+        <div class="icoca_intro">
+            <img src="./img/icoca_card.webp" alt="ICOCA 카드">
+
+            <div class="icoca_text">
+                <h3>ICOCA 교통카드</h3>
+
+                <p>
+                    ICOCA(이코카) 카드는 JR 서일본에서 발행하는 교통·전자결제용 IC 카드로, 오사카·교토·고베 등 간사이 지역 여행자에게 필수 아이템입니다. 
+                    교통비 결제뿐 아니라 편의점·자판기·일부 식당에서도 사용 가능하며, 전국 주요 도시의 다른 교통카드(Suica, PASMO 등)와 호환됩니다.
+                </p>
+            </div>
+
+            <div class="clear"></div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>ICOCA의 장점</h2>
+
+        <div class="advantage">
+            <h3>편리함</h3>
+            <p>티켓 발권 없이 개찰구 터치만으로 승차·하차 가능합니다.</p>
+        </div>
+
+        <div class="advantage">
+            <h3>결제 기능</h3>
+            <p>편의점·자판기·백화점·드럭스토어 등에서 간편 결제 가능합니다.</p>
+        </div>
+
+        <div class="advantage">
+            <h3>충전식 카드</h3>
+            <p>필요한 만큼 충전하여 사용할 수 있습니다.</p>
+        </div>
+
+        <div class="clear"></div>
+    </section>
+
+    <section class="section">
+        <h2>구매 방법</h2>
+
+        <ul class="guide_list">
+            <li>JR 히로시마역 매표소 방문</li>
+            <li>ICOCA 카드 구매</li>
+            <li>원하는 금액 충전</li>
+            <li>개찰구 및 버스에서 바로 사용</li>
+            <li>잔액이 부족할 경우, 역 매표소나 편의점에서 추가 충전 가능</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>이용 시 주의사항</h2>
+
+        <ul class="guide_list">
+            <li>신칸센·특급열차: 별도 티켓 필요, ICOCA로는 결제 불가</li>
+            <li>환불: JR 서일본 창구에서만 가능, 수수료 220엔 공제 후 보증금 500엔 반환</li>
+            <li>현금 충전만 가능: 신용카드 충전 불가 (일본 현지 기준)</li>
+            <li>지역 제한: 일부 지방 사철·버스에서는 사용 불가</li>
+        </ul>
+    </section>
+
+</div>
+<footer>
+    Copyright &copy; 히로시마 여행 정보 사이트. All rights reserved.
+</footer>
+
+</body>
+</html>

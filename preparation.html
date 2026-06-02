@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:"맑은 고딕";
+    background:#f6efe6;
+}
+
+ul{
+    list-style-type:none;
+}
+
+a{
+    text-decoration:none;
+}
+
+header{
+    width:100%;
+    background:#f3dfbd;
+    border-bottom:3px solid #7b2d26;
+    padding:0px 80px;
+}
+
+#logo{
+    float:left;
+}
+
+#logo img{
+    width:230px;
+    height:120px;
+    object-fit:cover;
+    display:block;
+}
+
+#menu{
+    float:right;
+    margin-top:45px;
+}
+
+#menu ul li{
+    display:inline-block;
+    position:relative;
+    margin-left:45px;
+}
+
+#menu ul li a{
+    display:block;
+    padding:8px 5px;
+    font-size:18px;
+    font-weight:bold;
+    letter-spacing:1.5px;
+    color:#7b2d26;
+    background:none;
+    border-radius:4px;
+}
+
+#menu ul li a:hover{
+    background:#7b2d26;
+    color:white;
+}
+
+#menu ul li .sub{
+    display:none;
+    position:absolute;
+    top:40px;
+    left:0;
+    width:160px;
+    background:#fffaf3;
+    border:1px solid #ddd0c0;
+}
+
+#menu ul li .sub li{
+    display:block;
+    margin-left:0;
+}
+
+#menu ul li .sub li a{
+    display:block;
+    padding:10px 12px;
+    font-size:15px;
+    color:#4a2c24;
+    background:#fffaf3;
+    text-align:left;
+}
+
+#menu ul li .sub li a:hover{
+    background:#ead7c4;
+    color:#8b3a32;
+}
+
+#menu ul li:hover .sub{
+    display:block;
+}
+#page{
+    width:92%;
+    margin:35px auto;
+}
+.clear{
+    clear:both;
+}
+.section{
+    background:#fffaf3;
+    margin-top:35px;
+    padding:45px 55px;
+    border-radius:8px;
+}
+
+.section h2{
+    text-align:center;
+    font-size:34px;
+    color:#7b2d26;
+    margin-bottom:35px;
+}
+
+.prepare_card{
+    float:left;
+    width:30%;
+    margin-right:3%;
+    background:#f0ebe5;
+    min-height:300px;
+    padding:30px;
+    border-radius:8px;
+    text-align:center;
+}
+
+.prepare_card:last-child{
+    margin-right:0;
+}
+
+.prepare_card h3{
+    color:#7b2d26;
+    font-size:25px;
+    margin-bottom:15px;
+}
+
+.prepare_card p{
+    font-size:17px;
+    line-height:1.7;
+    color:#444;
+}
+
+.check_list{
+    background:#f0ebe5;
+    padding:30px 45px;
+    border-radius:8px;
+}
+
+.check_list li{
+    list-style-type:square;
+    font-size:18px;
+    line-height:2;
+    color:#444;
+}
+@media screen and (max-width:768px){
+    header{
+        padding:0;
+        text-align:center;
+    }
+
+    #logo{
+        float:none;
+    }
+
+    #logo img{
+        margin:0 auto;
+    }
+
+    #menu{
+        float:none;
+        margin-top:0;
+        padding-bottom:15px;
+    }
+
+    #menu ul li{
+        display:block;
+        margin-left:0;
+        margin-top:8px;
+    }
+
+    #menu ul li .sub{
+        position:static;
+        width:100%;
+    }
+
+    #main_banner{
+        height:auto;
+        padding:70px 20px;
+    }
+
+    #main_banner h1{
+        font-size:30px;
+    }
+
+    .card{
+        float:none;
+        width:100%;
+        margin: right 0;
+        margin-bottom:20px;
+    }
+    .section{
+    padding:35px 25px;
+    }
+
+    .prepare_card{
+        float:none;
+        width:100%;
+        margin-right:0;
+        margin-bottom:20px;
+    }
+
+    .check_list{
+        padding:25px;
+    }
+}
+footer{
+    margin-top:45px;
+    padding:25px 0;
+    background:#7b2d26;
+    color:white;
+    text-align:center;
+    font-size:14px;
+}
+</style>
+
+<title>히로시마 여행 정보 사이트</title>
+</head>
+
+<body>
+
+<header>
+    <div id="logo">
+        <a href="index.html">
+            <img src="./img/logoalpha.png" alt="로고">
+        </a>
+    </div>
+    <div id="menu">
+        <ul>
+            <li>
+                <a href="#">명소탐방</a>
+                <ul class="sub">
+                    <li><a href="peacepark.html">평화공원</a></li>
+                    <li><a href="castle.html">히로시마성</a></li>
+                    <li><a href="miyajima.html">미야지마</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">미식기행</a>
+                <ul class="sub">
+                    <li><a href="okonomiyaki.html">오코노미야키</a></li>
+                    <li><a href="kaki.html">굴 요리</a></li>
+                    <li><a href="sake.html">사케</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">이동가이드</a>
+                <ul class="sub">
+                    <li><a href="transport.html">교통수단</a></li>
+                    <li><a href="pass.html">패스</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">커뮤니티</a>
+                <ul class="sub">
+                    <li><a href="FAQS.html">FAQS</a></li>
+                    <li><a href="shopping.html">쇼핑정보</a></li>
+                    <li><a href="travel_reviews.html">여행후기</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">여행준비</a>
+                <ul class="sub">
+                    <li><a href="preparation.html">준비안내</a></li>
+                    <li><a href="ic_card.html">IC카드</a></li>
+                 </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="clear"></div>
+</header>
+<div id="page">
+    <section class="section">
+        <h2>출국 전 확인사항</h2>
+
+        <div class="prepare_card">
+            <h3>여권 확인</h3>
+            <p>여권 유효기간과 영문 이름이 항공권 정보와 일치하는지 확인합니다.<br>
+                유효기간이 6개월 이상 남아있는지 꼭 확인하세요.<br>
+                여행 당일 꼭 여권 지참 확인하세요!!!
+            </p>
+        </div>
+
+        <div class="prepare_card">
+            <h3>환전 준비</h3>
+            <p>은행사 인터넷 뱅킹을 이용하면 더욱 편리하게, 우대환율로 더욱 값 싸게 환전할 수 있습니다.</p>
+        </div>
+
+        <div class="prepare_card">
+            <h3>인터넷 준비</h3>
+            <p>로밍, eSIM, 도시락 와이파이 중 여행 스타일에 맞는 방법을 선택하여, 여행 전에 미리 준비해주세요</p>
+        </div>
+
+        <div class="clear"></div>
+    </section>
+
+    <section class="section">
+        <h2>준비물 체크리스트</h2>
+
+        <ul class="check_list">
+            <li>여권</li>
+            <li>항공권 또는 예약 확인서</li>
+            <li>숙소 예약 확인서</li>
+            <li>엔화</li>
+            <li>트래블 월렛</li>
+            <li>보조배터리(기내 수화물 규정을 참고해주세요.)</li>
+            <li>충전기</li>
+            <li>우산 또는 양산</li>
+            <li>상비약</li>
+        </ul>
+    </section>
+</div>
+<footer>
+    Copyright &copy; 히로시마 여행 정보 사이트. All rights reserved.
+</footer>
+
+</body>
+</html>

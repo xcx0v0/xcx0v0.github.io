@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:"맑은 고딕";
+    background:#f6efe6;
+}
+
+ul{
+    list-style-type:none;
+}
+
+a{
+    text-decoration:none;
+}
+
+header{
+    width:100%;
+    background:#f3dfbd;
+    border-bottom:3px solid #7b2d26;
+    padding:0px 80px;
+}
+
+#logo{
+    float:left;
+}
+
+#logo img{
+    width:230px;
+    height:120px;
+    object-fit:cover;
+    display:block;
+}
+
+#menu{
+    float:right;
+    margin-top:45px;
+}
+
+#menu ul li{
+    display:inline-block;
+    position:relative;
+    margin-left:45px;
+}
+
+#menu ul li a{
+    display:block;
+    padding:8px 5px;
+    font-size:18px;
+    font-weight:bold;
+    letter-spacing:1.5px;
+    color:#7b2d26;
+    background:none;
+    border-radius:4px;
+}
+
+#menu ul li a:hover{
+    background:#7b2d26;
+    color:white;
+}
+
+#menu ul li .sub{
+    display:none;
+    position:absolute;
+    top:40px;
+    left:0;
+    width:160px;
+    background:#fffaf3;
+    border:1px solid #ddd0c0;
+}
+
+#menu ul li .sub li{
+    display:block;
+    margin-left:0;
+}
+
+#menu ul li .sub li a{
+    display:block;
+    padding:10px 12px;
+    font-size:15px;
+    color:#4a2c24;
+    background:#fffaf3;
+    text-align:left;
+}
+
+#menu ul li .sub li a:hover{
+    background:#ead7c4;
+    color:#8b3a32;
+}
+
+#menu ul li:hover .sub{
+    display:block;
+}
+#page{
+    width:92%;
+    margin:35px auto;
+}
+.clear{
+    clear:both;
+}
+#food_banner{
+    height:430px;
+    background-image:
+        linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+        url("./img/kaki_banner.png");
+    background-size:cover;
+    background-position:center;
+    text-align:center;
+    padding-top:150px;
+    border-radius:4px;
+}
+
+#food_banner h1{
+    color:white;
+    font-size:46px;
+    letter-spacing:2px;
+}
+
+#food_banner p{
+    color:#f5e8d5;
+    font-size:20px;
+    margin-top:15px;
+}
+
+.section{
+    background:#fffaf3;
+    margin-top:35px;
+    padding:45px 55px;
+    border-radius:8px;
+}
+
+.section h2{
+    text-align:center;
+    font-size:34px;
+    color:#7b2d26;
+    margin-bottom:25px;
+}
+
+.intro_text{
+    font-size:20px;
+    line-height:2;
+    text-align:center;
+    color:#333;
+}
+
+.food_photo_box{
+    margin-top:35px;
+}
+
+.food_photo{
+    float:left;
+    width:30%;
+    margin-right:3%;
+}
+
+.food_photo:last-child{
+    margin-right:0;
+}
+
+.food_photo img{
+    width:100%;
+    height:230px;
+    object-fit:cover;
+    border-radius:8px;
+}
+
+.food_photo h3{
+    color:#7b2d26;
+    font-size:22px;
+    margin-top:15px;
+    text-align:center;
+}
+
+.restaurant_box{
+    margin-top:20px;
+}
+
+.restaurant{
+    float:left;
+    width:30%;
+    margin-right:3%;
+    background:#f0ebe5;
+    padding:28px 22px;
+    border-radius:8px;
+    min-height:210px;
+}
+.restaurant:last-child{
+    margin-right:0;
+}
+
+.restaurant h3{
+    color:#7b2d26;
+    font-size:23px;
+    margin-bottom:15px;
+    text-align:center;
+}
+
+.restaurant p{
+    font-size:17px;
+    line-height:1.7;
+    color:#444;
+}
+.map_btn{
+    display:block;
+    width:120px;
+    margin:25px auto 0 auto;
+    padding:10px 0;
+    background:#7b2d26;
+    color:white;
+    text-align:center;
+    border-radius:5px;
+    font-size:15px;
+}
+
+.map_btn:hover{
+    background: yellowgreen;
+}
+@media screen and (max-width:768px){
+    header{
+        padding:0;
+        text-align:center;
+    }
+
+    #logo{
+        float:none;
+    }
+
+    #logo img{
+        margin:0 auto;
+    }
+
+    #menu{
+        float:none;
+        margin-top:0;
+        padding-bottom:15px;
+    }
+
+    #menu ul li{
+        display:block;
+        margin-left:0;
+        margin-top:8px;
+    }
+
+    #menu ul li .sub{
+        position:static;
+        width:100%;
+    }
+
+    #main_banner{
+        height:auto;
+        padding:70px 20px;
+    }
+
+    #main_banner h1{
+        font-size:30px;
+    }
+
+    .card{
+        float:none;
+        width:100%;
+        margin: right 0;
+        margin-bottom:20px;
+    }
+}
+footer{
+    margin-top:45px;
+    padding:25px 0;
+    background:#7b2d26;
+    color:white;
+    text-align:center;
+    font-size:14px;
+}
+</style>
+
+<title>굴 요리</title>
+</head>
+
+<body>
+
+<header>
+    <div id="logo">
+        <a href="index.html">
+            <img src="./img/logoalpha.png" alt="로고">
+        </a>
+    </div>
+    <div id="menu">
+        <ul>
+            <li>
+                <a href="#">명소탐방</a>
+                <ul class="sub">
+                    <li><a href="peacepark.html">평화공원</a></li>
+                    <li><a href="castle.html">히로시마성</a></li>
+                    <li><a href="miyajima.html">미야지마</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">미식기행</a>
+                <ul class="sub">
+                    <li><a href="okonomiyaki.html">오코노미야키</a></li>
+                    <li><a href="kaki.html">굴 요리</a></li>
+                    <li><a href="sake.html">사케</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">이동가이드</a>
+                <ul class="sub">
+                    <li><a href="transport.html">교통수단</a></li>
+                    <li><a href="pass.html">패스</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">커뮤니티</a>
+                <ul class="sub">
+                    <li><a href="FAQS.html">FAQS</a></li>
+                    <li><a href="shopping.html">쇼핑정보</a></li>
+                    <li><a href="travel_reviews.html">여행후기</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">여행준비</a>
+                <ul class="sub">
+                   <li><a href="preparation.html">준비안내</a></li>
+                   <li><a href="ic_card.html">IC카드</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="clear"></div>
+</header>
+<div id="page">
+
+    <section id="food_banner">
+        <h1>히로시마 굴 요리</h1>
+        <p>히로시마라고 하면 굴!</p>
+    </section>
+
+    <section class="section">
+        <h2>음식 소개</h2>
+        <p class="intro_text">
+            전국 제일의 생산량을 자랑하는 히로시마의 굴.
+            생으로 좋고, 굽고 좋고, 튀겨서 좋다!」라고, 어떤 요리로 해도 틀림없는 맛입니다.
+일년 내내 즐길 수 있는 굴입니다만, 가장 몸이 좋은 겨울이 본격 시즌!
+히로시마에서는 굴 오두막과 선술집, 먹거리 탐방 음식 등 곳곳에서 신선한 굴 요리를 즐길 수 있습니다.
+        </p>
+    </section>
+
+    <section class="section">
+        <h2>왜 히로시마의 굴은 맛있는가?</h2>
+
+        <div class="food_photo_box">
+            <div class="food_photo">
+                <img src="./img/kaki1.png" alt="굴">
+                <h3>비밀① 축복받은 「히로시마만」의 환경</h3>
+                <p>히로시마 만은 파도가 조용하고 조수의 흐름도 적당하고 굴의 육성에 좋은 조건이 갖추어져 있습니다. 
+                    중국 산지에서 흐르는 풍부한 영양분이 강을 통해 운반되기 때문에 양질의 플랑크톤이 자라는 것이 맛있는 굴이 자라게 됩니다.</p>
+            </div>
+
+            <div class="food_photo">
+                <img src="./img/kaki2.png" alt="굴">
+                <h3>비밀② 400년 이상 계속되는 역사가 자란 양식기술</h3>
+                <p>히로시마의 굴 양식의 역사는 낡아 무로마치 시대(400년 이상전)로부터 계속되고 있습니다. 
+                    오랜 역사 속에서, 히로시마 독자적인 간만차를 이용한 양식법이나, 
+                    최근에는 「카키코마치」와 같은 새로운 품종의 개발 등, 생산자들의 지혜와 기술이 계승되어 진화하고 있습니다.</p>
+            </div>
+
+            <div class="food_photo">
+                <img src="./img/kaki3.png" alt="굴">
+                <h3>비밀③ 철저한 「안심・안전」에의 대처</h3>
+                <p>전국적으로 인기의 이유는 그 맛은 물론 확실한 안전성에도 있습니다. 
+                    히로시마현은 독자적으로 조례를 정해, 식품 위생상의 안전 대책에 특히 힘을 쏟고 있습니다.</p>
+            </div>
+
+            <div class="clear"></div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>추천 굴 요리</h2>
+
+        <div class="food_photo_box">
+            <div class="food_photo">
+                <img src="./img/kaki4.png" alt="굴">
+                <h3>다채로운 메뉴로 맛볼 수 있는 클래식 요리 「굴튀김」</h3>
+                <p>밖은 바삭바삭한 옷의 식감, 안에서는 사르르~ 맛있는 굴이 입 가득 퍼집니다. </p>
+            </div>
+
+            <div class="food_photo">
+                <img src="./img/kaki5.png" alt="굴">
+                <h3>겨울에 먹으면 더욱 좋은 「굴나베」</h3>
+                <p>추운 날에 무성하게 먹고 싶어지는 것이 굴나베! 
+                냄비 안쪽에 된장을 바르고 생굴과 야채를 끓여서 먹는 히로시마 전통의 향토요리입니다.</p>
+            </div>
+
+            <div class="food_photo">
+                <img src="./img/kaki6.png" alt="굴">
+                <h3>반찬이 필요없다 「굴밥」</h3>
+                <p>굴의 삶은 국물을 사용하여 밥을 짓고 마무리에 통통 삶은 굴을 담는 것이 포인트. 별도로 요리하면 통통한 식감을 즐길 수 있습니다. 
+                    굴의 맛이 쌀 한 알 한 덩어리에 스며들어 맛은 일품!!</p>
+            </div>
+             <div class="clear"></div>
+        </div>  
+    </section>
+
+    <section class="section">
+        <h2>추천 맛집</h2>
+
+        <div class="restaurant_box">
+            <div class="restaurant">
+                <h3>STEAM Oyster Pub</h3>
+                <p>굴과 술을 함께 즐기는 히로시마의 대표 가게!</p>
+                <a class="map_btn" href="https://maps.app.goo.gl/8BQWwUmLB1BCGWLW7" target="_blank">지도 보기</a>
+            </div>
+
+            <div class="restaurant">
+                <h3>에코히키</h3>
+                <p>히로시마 미야지마식 굴로 잘 알려진 유명 가게 중 하나입니다.</p>
+                <a class="map_btn" href="https://maps.app.goo.gl/ErKu2WSKMoFesSzD9" target="_blank">지도 보기</a>
+            </div>
+
+            <div class="restaurant">
+                <h3>OYSTER FARM Hiroshima</h3>
+                <p>히로시마 굴과 세토우치의 진미를 즐길 수 있는 오이스터 바</p>
+                <a class="map_btn" href="https://maps.app.goo.gl/3KQ8S2pnEeoYD97w5" target="_blank">지도 보기</a>
+            </div>
+
+            <div class="clear"></div>
+        </div>
+    </section>
+
+</div>
+<footer>
+    Copyright &copy; 히로시마 여행 정보 사이트. All rights reserved.
+</footer>
+
+</body>
+</html>

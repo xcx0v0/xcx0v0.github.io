@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:"맑은 고딕";
+    background:#f6efe6;
+}
+
+ul{
+    list-style-type:none;
+}
+
+a{
+    text-decoration:none;
+}
+
+header{
+    width:100%;
+    background:#f3dfbd;
+    border-bottom:3px solid #7b2d26;
+    padding:0px 80px;
+}
+
+#logo{
+    float:left;
+}
+
+#logo img{
+    width:230px;
+    height:120px;
+    object-fit:cover;
+    display:block;
+}
+
+#menu{
+    float:right;
+    margin-top:45px;
+}
+
+#menu ul li{
+    display:inline-block;
+    position:relative;
+    margin-left:45px;
+}
+
+#menu ul li a{
+    display:block;
+    padding:8px 5px;
+    font-size:18px;
+    font-weight:bold;
+    letter-spacing:1.5px;
+    color:#7b2d26;
+    background:none;
+    border-radius:4px;
+}
+
+#menu ul li a:hover{
+    background:#7b2d26;
+    color:white;
+}
+
+#menu ul li .sub{
+    display:none;
+    position:absolute;
+    top:40px;
+    left:0;
+    width:160px;
+    background:#fffaf3;
+    border:1px solid #ddd0c0;
+}
+
+#menu ul li .sub li{
+    display:block;
+    margin-left:0;
+}
+
+#menu ul li .sub li a{
+    display:block;
+    padding:10px 12px;
+    font-size:15px;
+    color:#4a2c24;
+    background:#fffaf3;
+    text-align:left;
+}
+
+#menu ul li .sub li a:hover{
+    background:#ead7c4;
+    color:#8b3a32;
+}
+
+#menu ul li:hover .sub{
+    display:block;
+}
+#page{
+    width:92%;
+    margin:35px auto;
+}
+.clear{
+    clear:both;
+}
+#faq_banner{
+    height:360px;
+    background-image:
+        linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+        url("./img/faq_banner.png");
+    background-size:cover;
+    background-position:center 20%;
+    text-align:center;
+    padding-top:120px;
+    border-radius:6px;
+}
+#faq_banner h1{
+    font-size:40px;
+    color:white;
+    letter-spacing:2px;
+}
+.section{
+    background:#fffaf3;
+    margin-top:35px;
+    padding:45px 55px;
+    border-radius:8px;
+}
+
+.section h2{
+    text-align:center;
+    font-size:34px;
+    color:#7b2d26;
+    margin-bottom:35px;
+}
+
+.faq_item{
+    background:#f0ebe5;
+    margin-bottom:25px;
+    padding:28px 35px;
+    border-radius:8px;
+}
+
+.faq_item h3{
+    color:#7b2d26;
+    font-size:23px;
+    margin-bottom:15px;
+}
+
+.faq_item p{
+    font-size:18px;
+    line-height:1.8;
+    color:#444;
+}
+@media screen and (max-width:768px){
+    header{
+        padding:0;
+        text-align:center;
+    }
+
+    #logo{
+        float:none;
+    }
+
+    #logo img{
+        margin:0 auto;
+    }
+
+    #menu{
+        float:none;
+        margin-top:0;
+        padding-bottom:15px;
+    }
+
+    #menu ul li{
+        display:block;
+        margin-left:0;
+        margin-top:8px;
+    }
+
+    #menu ul li .sub{
+        position:static;
+        width:100%;
+    }
+
+    #main_banner{
+        height:auto;
+        padding:70px 20px;
+    }
+
+    #main_banner h1{
+        font-size:30px;
+    }
+
+    .card{
+        float:none;
+        width:100%;
+        margin: right 0;
+        margin-bottom:20px;
+    }
+    #faq_banner{
+    height:auto;
+    padding:80px 20px;
+    }
+
+    #faq_banner h1{
+        font-size:34px;
+    }
+
+    .section{
+        padding:35px 25px;
+    }
+
+    .faq_item{
+        padding:25px 20px;
+    }
+
+    .faq_item h3{
+        font-size:20px;
+    }
+
+    .faq_item p{
+        font-size:16px;
+    }
+}
+footer{
+    margin-top:45px;
+    padding:25px 0;
+    background:#7b2d26;
+    color:white;
+    text-align:center;
+    font-size:14px;
+}
+
+</style>
+
+<title>히로시마 여행 정보 사이트</title>
+</head>
+
+<body>
+
+<header>
+    <div id="logo">
+        <a href="index.html">
+            <img src="./img/logoalpha.png" alt="로고">
+        </a>
+    </div>
+    <div id="menu">
+        <ul>
+            <li>
+                <a href="#">명소탐방</a>
+                <ul class="sub">
+                    <li><a href="peacepark.html">평화공원</a></li>
+                    <li><a href="castle.html">히로시마성</a></li>
+                    <li><a href="miyajima.html">미야지마</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">미식기행</a>
+                <ul class="sub">
+                    <li><a href="okonomiyaki.html">오코노미야키</a></li>
+                    <li><a href="kaki.html">굴 요리</a></li>
+                    <li><a href="sake.html">사케</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">이동가이드</a>
+                <ul class="sub">
+                    <li><a href="transport.html">교통수단</a></li>
+                    <li><a href="pass.html">패스</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">커뮤니티</a>
+                <ul class="sub">
+                    <li><a href="FAQS.html">FAQS</a></li>
+                    <li><a href="shopping.html">쇼핑정보</a></li>
+                    <li><a href="travel_reviews.html">여행후기</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">여행준비</a>
+                <ul class="sub">
+                   <li><a href="preparation.html">준비안내</a></li>
+                   <li><a href="ic_card.html">IC카드</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="clear"></div>
+</header>
+<div id="page">
+
+    <section id="faq_banner">
+        <h1>FAQS</h1>
+    </section>
+
+    <section class="section">
+        <h2>자주 묻는 질문</h2>
+
+        <div class="faq_item">
+            <h3>Q. 히로시마 여행은 몇 박이 적당한가요?</h3>
+            <p>A. 시내 관광만 한다면 2박 3일도 가능하지만, 미야지마와 오노미치 등 근교까지 둘러보려면 3박 4일을 추천합니다.</p>
+        </div>
+
+        <div class="faq_item">
+            <h3>Q. 미야지마는 어떻게 가나요?</h3>
+            <p>A. 히로시마역에서 JR 산요본선을 타고 미야지마구치역까지 이동한 뒤, 페리를 이용하면 됩니다.</p>
+        </div>
+
+        <div class="faq_item">
+            <h3>Q. 히로시마 시내 이동은 무엇이 편한가요?</h3>
+            <p>A. 원폭돔, 평화기념공원, 핫초보리 등 시내 관광지는 서로 가까워 도보로 이동해도 괜찮습니다.</p>
+        </div>
+
+        <div class="faq_item">
+            <h3>Q. 교통패스는 꼭 사야 하나요?</h3>
+            <p>A. 여러 지역을 이동하거나 JR을 자주 이용한다면 패스가 유리합니다. 짧은 일정이라면 IC카드나 노면전차 승차권도 괜찮습니다.</p>
+        </div>
+
+        <div class="faq_item">
+            <h3>Q. 히로시마에서 꼭 먹어야 할 음식은 무엇인가요?</h3>
+            <p>A. 히로시마식 오코노미야키, 굴 요리, 미야지마 모미지만쥬가 대표적입니다.</p>
+        </div>
+
+        <div class="faq_item">
+            <h3>Q. 히로시마 여행 시 주의할 점은 무엇인가요?</h3>
+            <p>A. 미야지마 페리 시간, 미야지마 방문 시 만조 시간과 간조 시간을 잘 확인하세요, 패스 사용 가능 구간을 미리 확인하는 것이 좋습니다.</p>
+        </div>
+
+    </section>
+
+</div>
+<footer>
+    Copyright &copy; 히로시마 여행 정보 사이트. All rights reserved.
+</footer>
+
+</body>
+</html>
